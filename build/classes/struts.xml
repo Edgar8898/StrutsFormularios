@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="hibernate-default">
+		<action name="alta" class="org.action.alta.ActionAlta" method="addUsercap">
+			<result name="input">/formalta.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="cuenta" class="org.action.cuenta.ActionCuenta" method="autentica">
+			<result name="error">/formcuenta.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="catalogo" class="org.action.ciudad.ActionCiudad" method="catalogoCiudad">
+			<result name="success">/formcatalogo.jsp</result>
+		</action>
+	</package>
+</struts>
